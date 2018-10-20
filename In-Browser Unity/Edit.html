@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<!-- saved from url=(0026)http://calebgeizer.com/3D/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>3d Test</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <style type="text/css">
+body{background:#000000;font-family:calibri;}
+
+#buttons{
+	z-index: 2;
+	position: absolute;
+	width:90px;
+	top: 0;
+	border-radius:10px;
+	overflow:none;
+	border:2px solid rgba(200,200,200,.8);
+	overflow:hidden;
+	font-weight:bold;
+}
+#buttons input, #buttons button{
+	margin: 2px 0 2px 0;
+}
+</style>
+
+<script src="chrome-extension://fabjlaokbhaoehejcoblhahcekmogbom/assets/js/mtw.js"></script></head>
+<!--
+
+-->
+<body>
+<div id="aimer"></div>
+<div id="buttons">
+<button type="button" id="CtrlToggle" onclick="enterFP(this)" style="width:100%;height:40px;">Start</button>
+<div style="text-align:center;">
+<b>Translate</b><br>
+<button type="button">\</button>
+<button type="button" onclick=" edit(0,-1,0)">|</button>
+<button type="button" onclick=" edit(0,0,-1)">/</button>
+<br>
+<button type="button" onclick=" edit(-1,0,0)">-</button>
+<input type="checkbox" name="Rotate" value="Rotate" onclick="toggleRot(this.checked)">
+<button type="button" onclick=" edit(1,0,0)">-</button>
+<br>
+<button type="button" onclick=" edit(0,0,1)">/</button>
+<button type="button" onclick=" edit(0,1,0)">|</button>
+<button type="button" >\</button>
+<br>
+
+Transform
+<br>
+<button type="button" onclick="resizeOpposite(0,1)">/\</button><br>
+<button type="button" onclick="resizeOpposite(1,0)">&lt;</button>
+<button type="button"  onclick="resize(1,0)">&gt;</button> <br>
+<button type="button" onclick="resize(0,1)">\/</button><br>
+<button type="button" onclick="multiResize('x')">-</button>
+<button type="button" onclick="multiResize('y')">|</button>
+<button type="button" onclick="multiResize('xy')">+</button><br>
+</div>
+ Class  <br><input type="text" id="classGiver" name="firstname" style="width:75px;" onBlur="onClassChange(this.value)" value="face1 wall"><br>
+Px  <br><input type="text" name="firstname" style="width:75px;" onBlur="onIntChange(this.value)" value="1"> <br>
+
+
+<button type="button" onclick="insert()" style="width:100%;height:40px;">Place</button><br>
+
+<button type="button" onclick="pause(this)" style="width:100%;">&#10074&#10074</button>
+<br><br>
+<button type="button" onclick="countthis()">Count:<div id="divcount" style="display:inherit;"></div></button><br><br>
+
+
+<input type="file" onchange="importTxt(this)"/><br>
+<a download="code.txt"><button type="button" onclick="exportTxt(this)">Export</button></a>
+<br>
+<b>Download:</b><br><button><a style="color:black;" href="JS/script.js" download>JS</a> &nbsp  &nbsp<a style="color:black;" href="styles/style.css" download>CSS</a>&nbsp  &nbsp<a style="color:black;" href="Index.html" download>HTML</a></button><br><div style="font-size:11pt;">ctrl-s for All</div>
+
+</div>
+
+
+
+
+
+
+
+  <div style="margin-top: 158px;">
+    <div id="stage" style="">
+      <div class="origin" id="position" style="">
+        <div class="origin" id="spinner" style="">
+          <!-- START OF OBJECTS -->
+
+          <!-- GROUND -->
+          <div class="face6" style="width: 1700px;height: 1980px;-webkit-transform: rotateX(-90deg) translateZ(100px)translateX(-608px)translateY(200px);background: url(http://www.rorysimka.com/images/Scn-Courtyard-GTex.jpg);margin-top: -880px;"></div>
+
+          <!-- TREE -->
+                <div class="shape cylinder-1 cyl-1" style="left:360%; margin-top:337% !important; z-index:1;">
+            <div class="face side s0">
+              <div class="photon-shader" style="background-color: rgba(255, 255, 255, 0.0431373);"></div>
+            </div>
+            <div class="face side s1">
+              <div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.0509804);"></div>
+            </div>
+            <div class="face side s2">
+              <div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.258824);"></div>
+            </div>
+            <div class="face side s3">
+              <div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.470588);"></div>
+            </div>
+            <div class="face side s4">
+              <div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.647059);"></div>
+            </div>
+            <div class="face side s5">
+              <div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.54902);"></div>
+            </div>
+            <div class="face side s6">
+              <div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.341176);"></div>
+            </div>
+            <div class="face side s7">
+              <div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.12549);"></div>
+            </div>
+                </div>
+
+
+                <div class="group">
+                  <div class="face1 wall"></div>
+                </div>
+
+                <!-- HOUSE -->
+          <div class="base zero" style="width: 200px; height: 200px;">
+
+            <div id="avatar">@</div> 
+
+            <div class="face1 wall">
+              <div id="start" onclick="enterFP(this)">►</div>
+            </div> 
+
+            <div class="face2">2</div> 
+            <div class="face3" style=" -webkit-transform: rotateY(-90deg)rotateX(-45deg)translateZ(-121px)translateY(-50px)translateX(0px);">3</div> 
+            <div class="face3" style=" -webkit-transform: rotateY(90deg)rotateX(-45deg)translateZ(-121px)translateY(-50px)translateX(0px);">3</div> 
+            <div class="face4">4</div> 
+            <div class="face5">5</div> 
+            <div class="face6">6</div> 
+            <div class="face7">7</div> 
+            <div class="face8">8</div>
+          </div>
+
+          <!-- HOUSE -->
+          <div class="base" style="-webkit-transform: translateX(500px) translateY(0px) translateZ(-800px) rotateX(0deg); transform: translateX(500px) translateY(0px) translateZ(-800px) rotateX(0deg); width: 200px; height: 200px;">
+            <div id="avatar">@</div> 
+
+            <div class="face1 wall">1</div> 
+            <div class="face2">2</div> 
+            <div class="face3" style=" -webkit-transform: rotateY(-90deg)rotateX(-45deg)translateZ(-121px)translateY(-50px)translateX(0px);">3</div> 
+            <div class="face3" style=" -webkit-transform: rotateY(90deg)rotateX(-45deg)translateZ(-121px)translateY(-50px)translateX(0px);">3</div> 
+            <div class="face4">4</div> 
+            <div class="face5">5</div> 
+            <div class="face6">6</div> 
+            <div class="face7">7</div> 
+            <div class="face8">8</div>
+          </div>
+
+          <div class="arrows" id="movable">
+            <div class="arrow" id="left" style="-webkit-transform: translateX(-27px) translateY(0px) translateZ(0px) rotateZ(0deg) rotateY(90deg) rotateX(0deg); width: 50px; height: inherit;z-index: 1;" data-x="669" data-y="70" data-z="84" data-rx="0" data-ry="0" data-rz="0" data-height="60" data-width="140"></div>
+            <div class="arrow" id="right" style="-webkit-transform: translateX(177px) translateY(0px) translateZ(0px) rotateZ(0deg) rotateY(90deg) rotateX(0deg); width: 50px; height: inherit;z-index: 1;" data-x="669" data-y="70" data-z="84" data-rx="0" data-ry="0" data-rz="0" data-height="60" data-width="140"></div>
+            <div class="arrow" id="up" style="-webkit-transform: translateX(77px) translateY(-100px) translateZ(0px) rotateZ(90deg) rotateY(0deg) rotateX(0deg); width: 50px; height: inherit;z-index: 1;" data-x="669" data-y="70" data-z="84" data-rx="0" data-ry="0" data-rz="0" data-height="60" data-width="140"></div>
+            <div class="arrow" id="down" style="-webkit-transform: translateX(77px) translateY(100px) translateZ(0px) rotateZ(90deg) rotateY(0deg) rotateX(0deg); width: 50px; height: inherit;z-index: 1;" data-x="669" data-y="70" data-z="84" data-rx="0" data-ry="0" data-rz="0" data-height="60" data-width="140"></div>
+            <div class="arrow" id="fwd" style="-webkit-transform: translateX(77px) translateY(0px) translateZ(40px) rotateZ(90deg) rotateY(0deg) rotateX(0deg); width: 50px; height: inherit;z-index: 1;" data-x="669" data-y="70" data-z="84" data-rx="0" data-ry="0" data-rz="0" data-height="60" data-width="140"></div>
+            <div class="arrow" id="back" style="-webkit-transform: translateX(77px) translateY(0px) translateZ(-40px) rotateZ(90deg) rotateY(0deg) rotateX(0deg); width: 50px; height: inherit;z-index: 1;" data-x="669" data-y="70" data-z="84" data-rx="0" data-ry="0" data-rz="0" data-height="60" data-width="140"></div>
+
+          </div>
+
+          <!-- END OF OBJECTS -->
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="JS/script.js"></script>
+  </div>
+
+  <div class="pnt-on-image-wrapper" style="display: none;">
+    <div class="pnt-on-image">
+      <div class="pnticn pnticn-logo pnticnlarge"></div>
+      <div class="pnt-onimg-text">Point</div>
+    </div>
+  </div>
+</body>
+</html>

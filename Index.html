@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<!-- saved from url=(0026)http://calebgeizer.com/3D/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>3d Test</title>
+  <link rel="stylesheet" href="styles/style.css">
+
+<script src="chrome-extension://fabjlaokbhaoehejcoblhahcekmogbom/assets/js/mtw.js"></script></head>
+
+<body>
+	<div id="aimer"></div>
+
+	<div id="buttons" style="text-align: right;">
+		<div style="text-align: left;width: 50%;position: absolute;">
+			<button>File</button> 
+			<button>Edit</button> 
+			<button>Help</button>
+		</div>
+
+		<button type="button" id="CtrlToggle" onclick="enterFP(this)" style="margin-right:10px;">►</button>
+		<button>T</button>
+		<button>B</button>
+		<button>O</button>
+		<button>B</button>
+		<button>O</button>
+	</div>
+
+
+	<div id="buttons" style="margin: 25px 0px 0px 13px;text-align:  left;background-color:  #282828;padding-bottom: 1px;">
+		<button id="select" style="margin-top: 1px;">
+			First Game.file 
+			<a style="padding-left:5px;">x</a> 
+		</button>
+	</div>
+
+	<div id="sidebar">
+		<button>T</button><br><br>
+		<button>B</button><br><br>
+		<button>O</button><br><br>
+		<hr style="border-bottom-width:  0px;"><br>
+		<button>L</button><br><br>
+	</div>
+
+	<div id="sidebar" class="right">
+		<button id="select">Levels</button>
+		<hr style="border-bottom-width:  0px;margin: -1px 0px 0px 44px;">
+		<div style="background-color:  #707070;margin: 0px 0px 0px -1px;box-shadow: grey 1px 0px 0px, black -1px 0px 0px;">
+			<br><hr style="border-bottom-width:  0px;border-color:  black;"><br><br><br><br>
+
+			<div style="text-align: right;">
+				<hr style="border-bottom-width:  0px;">
+				<button style="margin-right: 10px;">📃</button>
+				<button>🗑</button>
+				<hr style="border-bottom-width:  0px;border-color:  black;">
+			</div>
+		</div>
+
+		<button id="select">Layers</button>
+		<button id="select" style="background-color: #4c4c4c;box-shadow: #707070 inset 0px 1px 0px 0px, black inset 1px 0px 0px 0px, black 1px 0px 0px 0px;margin-bottom:  1px;z-index: 0;">Properties</button>
+		<hr style="border-bottom-width:  0px;border-color: #c5c5c5;margin: -1px 0px 0px -1px;z-index: 1;">
+		<hr style="border-bottom-width:  0px;margin: -1px 0px 0px 52px;z-index: 1;">
+
+		<div style="background-color:  #707070;height:100%;margin: 0px 0px 0px -1px;box-shadow: grey 1px 0px 0px, black -1px 0px 0px;">
+			<br><hr style="border-bottom-width:  0px;border-color:  black;">
+		</div>
+		<div style="margin-top: -271px;text-align: right;">
+			<hr style="border-bottom-width:  0px;margin-top: -20px;">
+			<button style="margin-right: 10px;margin-left: 10px;">📁</button>
+			<button style="margin-right: 10px;">📃</button>
+			<button>🗑</button>
+			<hr style="border-bottom-width:  0px;border-color:  black;">
+		</div>
+
+	</div>
+
+	<!-- 
+		Class  <br><input type="text" id="classGiver" name="firstname" style="width:75px;" onBlur="onClassChange(this.value)" value="face1 wall"><br>
+		Px  <br><input type="text" name="firstname" style="width:75px;" onBlur="onIntChange(this.value)" value="1"> <br>
+
+
+		<button type="button" onclick="insert()" style="width:100%;height:40px;">Place</button><br>
+
+		<button type="button" onclick="pause(this)" style="width:100%;">&#10074&#10074</button>
+		<br><br>
+		<button type="button" onclick="countthis()">Count:
+			<div id="divcount" style="display:inherit;"></div>
+		</button>
+		<br><br>
+
+		<input type="file" onchange="importTxt(this)"/><br>
+		<a download="code.txt"><button type="button" onclick="exportTxt(this)">Export</button></a>
+		<br>
+		<b>Download:</b><br><button>
+			<a style="color:black;" href="JS/script.js" download>JS</a> &nbsp  &nbsp
+			<a style="color:black;" href="styles/style.css" download>CSS</a>&nbsp  &nbsp
+			<a style="color:black;" href="Index.html" download>HTML</a>
+		</button>
+		<br>
+		<div style="font-size:11pt;">ctrl-s for All</div>
+
+	-->
+
+
+	<div style="margin-top: 158px;">
+		<div id="stage" style="">
+			<div class="origin" id="position" style="">
+				<div class="origin" id="spinner" style="">
+					<!-- START OF OBJECTS -->
+
+					<!-- GROUND -->
+					<div class="face6" style="width: 1700px;height: 1980px;-webkit-transform: rotateX(-90deg) translateZ(100px)translateX(-608px)translateY(200px);background: url(http://www.rorysimka.com/images/Scn-Courtyard-GTex.jpg);margin-top: -880px;"></div>
+
+					<!-- TREE -->
+		            <div class="shape cylinder-1 cyl-1" style="left:360%; margin-top:337% !important; z-index:1;">
+						<div class="face side s0">
+							<div class="photon-shader" style="background-color: rgba(255, 255, 255, 0.0431373);"></div>
+						</div>
+						<div class="face side s1">
+							<div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.0509804);"></div>
+						</div>
+						<div class="face side s2">
+							<div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.258824);"></div>
+						</div>
+						<div class="face side s3">
+							<div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.470588);"></div>
+						</div>
+						<div class="face side s4">
+							<div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.647059);"></div>
+						</div>
+						<div class="face side s5">
+							<div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.54902);"></div>
+						</div>
+						<div class="face side s6">
+							<div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.341176);"></div>
+						</div>
+						<div class="face side s7">
+							<div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.12549);"></div>
+						</div>
+		            </div>
+
+
+		            <div class="group">
+			            <div class="face1 wall"></div>
+		            </div>
+
+		            <!-- HOUSE -->
+					<div class="base zero" style="width: 200px; height: 200px;">
+
+						<div id="avatar">@</div> 
+
+						<div class="face1 wall">
+							<div id="start" onclick="enterFP(this)">►</div>
+						</div> 
+
+						<div class="face2">2</div> 
+						<div class="face3" style=" -webkit-transform: rotateY(-90deg)rotateX(-45deg)translateZ(-121px)translateY(-50px)translateX(0px);">3</div> 
+						<div class="face3" style=" -webkit-transform: rotateY(90deg)rotateX(-45deg)translateZ(-121px)translateY(-50px)translateX(0px);">3</div> 
+						<div class="face4">4</div> 
+						<div class="face5">5</div> 
+						<div class="face6">6</div> 
+						<div class="face7">7</div> 
+						<div class="face8">8</div>
+					</div>
+
+					<!-- HOUSE -->
+					<div class="base" style="-webkit-transform: translateX(500px) translateY(0px) translateZ(-800px) rotateX(0deg); transform: translateX(500px) translateY(0px) translateZ(-800px) rotateX(0deg); width: 200px; height: 200px;">
+						<div id="avatar">@</div> 
+
+						<div class="face1 wall">1</div> 
+						<div class="face2">2</div> 
+						<div class="face3" style=" -webkit-transform: rotateY(-90deg)rotateX(-45deg)translateZ(-121px)translateY(-50px)translateX(0px);">3</div> 
+						<div class="face3" style=" -webkit-transform: rotateY(90deg)rotateX(-45deg)translateZ(-121px)translateY(-50px)translateX(0px);">3</div> 
+						<div class="face4">4</div> 
+						<div class="face5">5</div> 
+						<div class="face6">6</div> 
+						<div class="face7">7</div> 
+						<div class="face8">8</div>
+					</div>
+
+					<div class="arrows" id="movable">
+						<div class="arrow" id="left" style="-webkit-transform: translateX(-27px) translateY(0px) translateZ(0px) rotateZ(0deg) rotateY(90deg) rotateX(0deg); width: 50px; height: inherit;z-index: 1;" data-x="669" data-y="70" data-z="84" data-rx="0" data-ry="0" data-rz="0" data-height="60" data-width="140"></div>
+						<div class="arrow" id="right" style="-webkit-transform: translateX(177px) translateY(0px) translateZ(0px) rotateZ(0deg) rotateY(90deg) rotateX(0deg); width: 50px; height: inherit;z-index: 1;" data-x="669" data-y="70" data-z="84" data-rx="0" data-ry="0" data-rz="0" data-height="60" data-width="140"></div>
+						<div class="arrow" id="up" style="-webkit-transform: translateX(77px) translateY(-100px) translateZ(0px) rotateZ(90deg) rotateY(0deg) rotateX(0deg); width: 50px; height: inherit;z-index: 1;" data-x="669" data-y="70" data-z="84" data-rx="0" data-ry="0" data-rz="0" data-height="60" data-width="140"></div>
+						<div class="arrow" id="down" style="-webkit-transform: translateX(77px) translateY(100px) translateZ(0px) rotateZ(90deg) rotateY(0deg) rotateX(0deg); width: 50px; height: inherit;z-index: 1;" data-x="669" data-y="70" data-z="84" data-rx="0" data-ry="0" data-rz="0" data-height="60" data-width="140"></div>
+						<div class="arrow" id="fwd" style="-webkit-transform: translateX(77px) translateY(0px) translateZ(40px) rotateZ(90deg) rotateY(0deg) rotateX(0deg); width: 50px; height: inherit;z-index: 1;" data-x="669" data-y="70" data-z="84" data-rx="0" data-ry="0" data-rz="0" data-height="60" data-width="140"></div>
+						<div class="arrow" id="back" style="-webkit-transform: translateX(77px) translateY(0px) translateZ(-40px) rotateZ(90deg) rotateY(0deg) rotateX(0deg); width: 50px; height: inherit;z-index: 1;" data-x="669" data-y="70" data-z="84" data-rx="0" data-ry="0" data-rz="0" data-height="60" data-width="140"></div>
+
+					</div>
+
+					<!-- END OF OBJECTS -->
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="JS/script.js"></script>
+	</div>
+
+	<div class="pnt-on-image-wrapper" style="display: none;">
+		<div class="pnt-on-image">
+			<div class="pnticn pnticn-logo pnticnlarge"></div>
+			<div class="pnt-onimg-text">Point</div>
+		</div>
+	</div>
+</body>
+</html>
